@@ -15,25 +15,31 @@ body {
 
 header {
     background-color: #915c4c;
+    background-image: url('images/outdoorshop.jpeg');
+    height: 384px;
 }
 
 nav {
     background-color: #542c34;
 }
+
 nav a {
     color: #fff;
     text-decoration: none;
 }
+
 nav li {
     display: inline;
     padding: 20px;
 }
+
 nav li:hover {
-    background-color: #caac8d;
+    background-color: #db9c5d;
 }
+
 nav ul {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     padding: 0;
     margin: 0;
 }
@@ -52,11 +58,13 @@ footer {
     justify-content: center;
     text-align: center;
 }
-#footerText{
+
+#footerText {
     flex-grow: 1;
     margin: 30px;
 }
-#footerSocial{
+
+#footerSocial {
     margin: 30px;
 }
 
