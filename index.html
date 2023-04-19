@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <!--Consider using Vue instead!-->
-    <script src="https://kit.fontawesome.com/ca6dee911a.js" crossorigin="anonymous"></script>
+
     <title>Autumn Spice - Love at First Sip</title>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ca6dee911a.js" crossorigin="anonymous"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -17,19 +22,20 @@
         <!--HEADER-->
         <header>
             <h1 id="titleLogo">Autumn Spice</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="craft.html">Our Craft</a></li>
-            </ul>
-        </nav>
 
         <!--MAIN-->
         <main>
-            <div>
+            <div id="leftPanel">
                 <h1>Our Coffee Haven</h1>
+                <p id="app">{{ message }}</p>
                 <p>
                     Experience the highest quality 100% Arabica coffee beans from along the equatorial belt.
                     We focus on making the best drinks with handroasted, Certified Organic Coffee and Fair Trade
@@ -40,8 +46,18 @@
                 </p>
                 <p>
                 <h2>New Store Grand Opening!</h2>
-                <img src="images/newshop.jpg" alt="Inside New Shop">
+                <img src="images/newshop.jpg" alt="Palatine new shop">
+                <p>Palatine station
+                    137 W Wood St.
+                    Palatine, IL 60067
+                    (847) 907-4370
                 </p>
+                </p>
+            </div>
+
+            <!-- Right Panel -->
+            <div id="rightPanel">
+                <img src="images/27788426.jpg" width="300px">
             </div>
         </main>
 

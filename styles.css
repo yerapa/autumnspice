@@ -1,9 +1,15 @@
+/*imports*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
 body {
     background-color: #204d48;
     margin: 0;
 }
 
 .container {
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
 }
@@ -11,16 +17,21 @@ body {
 /* Header content */
 #titleLogo {
     text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; /* center text*/
+    align-items: center; /* center items inside container*/
 }
 
 header {
-    background-color: #915c4c;
     background-image: url('images/outdoorshop.jpeg');
+    display: flex;
+    flex-direction: column;
     height: 384px;
 }
 
 nav {
-    background-color: #542c34;
+
 }
 
 nav a {
@@ -28,26 +39,41 @@ nav a {
     text-decoration: none;
 }
 
-nav li {
+
+nav ul {
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+}
+
+nav ul li {
     display: inline;
+    flex-grow: 1;
     padding: 20px;
 }
 
-nav li:hover {
-    background-color: #db9c5d;
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 50px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-}
 
-/* Main tag */
+/* Main content */
 main {
     background-color: #fff;
     padding: 50px;
+    display: flex;
+}
+
+#rightPanel {
+    /*background-color: #204d48;*/
+    text-align: center;
+}
+
+#leftPanel {
+    /*background-color: #915c4c;*/
 }
 
 /* Footer content */
