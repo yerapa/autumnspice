@@ -6,6 +6,21 @@ body {
     margin: 0;
 }
 
+blockquote {
+    color: #373737;
+    font-size: 26px;
+    font-style: italic;
+    quotes: 26px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+blockquote span {
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #979797;
+}
+
 /* Header content */
 #titleLogo {
     text-align: center;
