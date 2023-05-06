@@ -6,6 +6,14 @@ body {
     margin: 0;
 }
 
+.container {
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
 blockquote {
     color: #373737;
     font-size: 26px;
@@ -37,6 +45,10 @@ header {
     height: 384px;
 }
 
+header h1 {
+    color: #fff;
+}
+
 nav {
     font-variant: small-caps;
 }
@@ -53,9 +65,11 @@ nav ul {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 nav ul li {
+    background-color: rgba(0, 0, 0, 0.70);
     display: inline;
     flex-grow: 1;
     padding: 20px;
@@ -63,22 +77,15 @@ nav ul li {
 
 nav ul li:hover {
     background-color: rgba(0, 0, 0, 0.55);
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 
 /* Main content */
 main {
     background-color: #fff;
-    padding: 50px;
-}
-
-.container {
-    font-family: 'Mulish', sans-serif;
-    font-size: large;
-    font-weight: 500;
     display: flex;
-    flex-direction: column;
+    padding: 50px;
 }
 
 #rightPanel {
@@ -88,6 +95,7 @@ main {
 
 #leftPanel {
     /*background-color: #915c4c;*/
+
 }
 
 /* Footer content */
