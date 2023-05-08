@@ -22,14 +22,19 @@
         <!--HEADER-->
         <header>
             <h1 id="titleLogo">Autumn Spice</h1>
-            <nav id="nav">
+            <nav id="navApp">
+                <ul v-for="item in menu">
+                    <li><a v-bind:key="item.id" :href="item.url">{{ item.name }}</a></li>
+                </ul>
+            </nav>
+            <!-- <nav id="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="locations.html">Locations</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </header>
 
         <!--MAIN-->
@@ -76,7 +81,20 @@
 
     <!-- VUE -->
     <script>
-
+        const app = Vue.createApp({
+            data() {
+                return {
+                    menu: [
+                        { id: 10, url: "#", name: 'Home' },
+                        { id: 11, url: "#", name: 'Menu' },
+                        { id: 12, url: '#', name: "About Us" },
+                        { id: 13, url: '#', name: "Our Craft" },
+                        { id: 14, url: '#', name: "Locations" }
+                    ]
+                }
+                //end menu
+            }
+        }).mount('#navApp')
     </script>
 </body>
 

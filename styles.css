@@ -29,7 +29,7 @@ blockquote span {
     color: #979797;
 }
 
-/* Header content */
+/* ---- Header content ----*/
 #titleLogo {
     text-align: center;
     display: flex;
@@ -51,6 +51,7 @@ header h1 {
 
 nav {
     font-variant: small-caps;
+    display: flex;
 }
 
 nav a {
@@ -62,26 +63,25 @@ nav a {
 nav ul {
     font-size: larger;
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
     margin-bottom: 0;
     padding-left: 0;
+    width: fit-content;
 }
 
 nav ul li {
-    background-color: rgba(0, 0, 0, 0.70);
-    display: inline;
-    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.50);
     padding: 20px;
+    width: fit-content;
+
 }
 
 nav ul li:hover {
-    background-color: rgba(0, 0, 0, 0.55);
-    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+
 }
 
 
-/* Main content */
+/*---- Main content ----*/
 main {
     background-color: #fff;
     display: flex;
@@ -89,16 +89,15 @@ main {
 }
 
 #rightPanel {
-    /*background-color: #204d48;*/
     text-align: center;
+    margin-left: 25px;
 }
 
 #leftPanel {
-    /*background-color: #915c4c;*/
 
 }
 
-/* Footer content */
+/*---- Footer content ----*/
 footer {
     background-color: #542c34;
     color: #fff;
@@ -116,7 +115,7 @@ footer {
     margin: 30px;
 }
 
-/* Font Awesome */
+/*---- Font Awesome ----*/
 .fa-brands {
     border-radius: 8px;
     padding: 5px;
