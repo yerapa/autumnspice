@@ -9,18 +9,26 @@
     <title>Autumn Spice - Menu</title>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/ca6dee911a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <div class="container">
         <!--HEADER-->
         <header>
+            <ul id="slideShow">
+                <li id="slide"><img src="images/slideshow/img1.jpg" alt=""></li>
+                <li id="slide"><img src="images/slideshow/img2.jpg" alt=""></li>
+                <li id="slide"><img src="images/slideshow/img3.jpg" alt=""></li>
+                <li id="slide"><img src="images/slideshow/img4.jpg" alt=""></li>
+                <li id="slide"><img src="images/slideshow/img5.jpg" alt=""></li>
+            </ul>
             <h1 id="titleLogo">Autumn Spice</h1>
             <nav id="navApp">
                 <ul v-for="item in menu">
@@ -32,31 +40,69 @@
         <!--MAIN-->
         <main>
             <div id="leftPanel">
-                <h1>Menu</h1>
-                <p>
-                    Experience the highest quality 100% Arabica coffee beans from along the equatorial belt.
-                    We focus on making the best drinks with handroasted, Certified Organic Coffee and Fair Trade
-                    Certified Coffee.
-                </p>
-                <p>
-                    Indulge yourself at Autumn Spice with our quality handcrafted drinks and food.
-                </p>
-                <p>
-                <h2>New Store Grand Opening!</h2>
-                <img src="images/newshop.jpg" alt="Palatine new shop">
-                <p>
-                    Palatine station<br>
-                    137 W Wood St.<br>
-                    Palatine, IL 60067<br>
-                    (847) 907-4370
-                </p>
-                </p>
+                <div class="menuContainer">
+                    <div class="menuContent">
+
+                        <h2>Menu</h2>
+                        <div class="menuTabs">
+                            <button class="drink-b active" data-target="#toDrink">Coffee Drinks</button>
+                            <button class="food-b" data-target="#toEat">Breakfast & Pastries</button>
+                        </div>
+
+                        <div class="menuItems">
+                            <div id="toDrink" class="drink">
+                                <i>Prices for medium sizes.</i>
+                                <h3>Brewed Coffee</h3>
+                                <p>Coffee of the day. Medium, Decaf. <sup>$3.65</sup><br><i>
+                                        Light and dark roast till 12pm</i></p>
+
+                                <h3>Latte</h3>
+                                <p>Espresso shots with milk and a layer of foam. <sup>$4.75</sup></p>
+
+                                <h3>Cappuccino</h3>
+                                <p>Espresso with half milk and foam. <sup>$4.50</sup></p>
+
+                                <h3>Flat White</h3>
+                                <p>Ristretto espresso with milk. <sup>$4.90</sup></p>
+
+                                <h3>The Mabel</h3>
+                                <p>Medium-light roast ristretto, oatmilk, Toffee Nut & White Mocha. <sup>$3.65</sup></p>
+
+                                <h3>Raspberry Cheesecake <small><i>*seasonal</i></small></h3>
+                                <p>Espresso, milk, Raspberry-White Mocha sauce, whipped cream <br>
+                                    topped with vanilla graham crunch. <sup>$3.65</sup></p>
+                            </div>
+
+                            <div id="toEat" class="eat hide">
+                                <h3>Egg Avocado Toast</h3>
+                                <p>Avocado toast with poached eggs. <sup>$7.95</sup></p>
+
+                                <h3>Salmon Avocado Toast</h3>
+                                <p>Avocado toast smoked salmon. <sup>$7.95</sup></p>
+
+                                <h3>Egg Avocado Toast</h3>
+                                <p>Avocado toast with poached eggs. <sup>$7.95</sup></p>
+
+                                <h3>French Toast</h3>
+                                <p>Add toppings. <sup>$7.95</sup></p>
+
+                                <h3>Cinnamon Roll</h3>
+                                <p>Freshly baked cinnamon rolls. <sup>$7.95</sup></p>
+
+                                <h3>Berry Trio Parfait</h3>
+                                <p>Greek yoghurt, chia seeds, granola topped with strawberries, <br>
+                                    raspberries and blueberries. <sup>$7.95</sup></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <!-- Right Panel -->
-            <div id="rightPanel">
+            <!-- Right Panel 
+            <div id="rightPanel"></div>
                 <img src="images/27788426.jpg" width="300px">
-            </div>
+            </div>-->
     </div>
     </main>
 

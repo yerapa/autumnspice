@@ -1,0 +1,236 @@
+/*imports*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+body {
+    background-color: #204d48;
+    margin: 0;
+}
+
+.container {
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+blockquote {
+    color: #373737;
+    font-size: 26px;
+    font-style: italic;
+    quotes: 26px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+blockquote span {
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #979797;
+}
+
+/* ---- Header content ----*/
+header {
+    /*background-image: url('images/outdoorshop.jpeg');*/
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+header h1 {
+    color: #fff;
+}
+
+#titleLogo {
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    /* center text*/
+    align-items: center;
+    /* center items inside container*/
+}
+
+/*Slideshow header*/
+#slide {
+    list-style: none;
+}
+
+#slide img {
+    width: 99.1vw;
+}
+
+#slideShow {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#slideShow>li {
+    position: absolute;
+}
+
+/* Navigation Menu */
+nav {
+    font-variant: small-caps;
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+nav ul {
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    background-color: rgba(0, 0, 0, 0.50);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+
+}
+
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+
+}
+
+
+/*---- Main content ----*/
+main {
+    background-color: #fff;
+    display: flex;
+    padding: 50px;
+}
+
+#rightPanel {
+    text-align: center;
+    margin-left: 25px;
+    flex: 1;
+}
+
+#leftPanel {
+    flex: 2;
+}
+
+/* Food Menu */
+.menuContainer {
+    border: #000;
+}
+
+.menuContent {
+    text-align: center;
+}
+
+.menuTabs {
+    display: flex;
+    padding: 10px;
+}
+
+button {
+    font-size: x-large;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.drink p,
+.food p {
+    margin: 0 20px;
+}
+
+.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+.fade-up {
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.25;
+        transform: translateY(40px);
+    }
+}
+
+/* ------- CATERING FORM -------- */
+
+#submit {
+    background-color: #000;
+    color: #fff;
+}
+
+/*---- Footer content ----*/
+footer {
+    background-color: #542c34;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#footerText {
+    flex-grow: 1;
+    margin: 30px;
+}
+
+#footerSocial {
+    margin: 30px;
+}
+
+
+/* ------ MEDIA QUERY ------ */
+
+
+
+
+
+
+
+/*---- Font Awesome ----*/
+.fa-brands {
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 25px;
+    font-size: 20pt;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa-brands:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #ee7955;
+    color: white;
+}
