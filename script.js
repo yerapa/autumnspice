@@ -10,6 +10,30 @@ $(document).ready(function () {
             .appendTo('#slideShow');
     }, 6000);
 
+    //burguer menu
+    $(document).ready(function () {
+        
+        if ($(window).width() < 768) {
+            $(".close").hide();
+            $("nav").hide();
+            $(".hamburger").click(function () {
+                $("nav").slideToggle("slow", function () {
+                    $(".hamburger").hide();
+                    $("nav ul").show()
+                    $(".close").show();
+                });
+            });
+
+            $(".close").click(function () {
+                $("nav").slideToggle("slow", function () {
+                    $(".close").hide();
+                    $(".hamburger").show();
+                });
+            });
+        }
+
+    });
+
     // Nav animation
     $('a').hover(function () {
         $(this).animate({
