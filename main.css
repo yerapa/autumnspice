@@ -296,12 +296,6 @@ footer {
         margin-right: 0;
     }
 
-    nav ul, nav li {
-        display: flex;
-        justify-content: center;
-        z-index: 3;
-    }
-
     img {
         width: 80%;
     }
