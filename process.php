@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autumn Spice - About Us</title>
+
+    <title>Autumn Spice - Thank you!</title>
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -18,8 +19,8 @@
 </head>
 
 <body>
-    <!--HEADER-->
     <div class="container">
+        <!--HEADER-->
         <header>
             <ul id="slideShow">
                 <li id="slide"><img src="images/slideshow/img1.jpg" alt="Barista pouring milk"></li>
@@ -36,23 +37,26 @@
             </nav>
         </header>
 
+        <!--MAIN-->
         <main>
             <div id="leftPanel">
-                <h1>Our Craft</h1>
-                <p>
-                    We opened Autumn Spice in 2006, in a small cafe and drive-thru in Crystal Lake IL. We jumped into
-                    the coffee industry head first. There were some things we all really cared about. First, we wanted
-                    to
-                    find,
-                    roast,
-                    and sell the absolute best coffees we could get our hands on.
-                </p>
+                <h2>Submitted Information</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
 
-                <h1>Proud</h1>
-                <p>
-                    Coffee shops occupy an important space in many of our lives because of their unique ability to
-                    fulfill
-                </p>
+                    <?php
+                    foreach ($_POST as $n => $v) {
+
+                        echo "<tr>
+                            <th>$n</th>
+                            <th>$v</th>
+                            </tr>";
+                    }
+                    ?>
+                </table>
             </div>
         </main>
 

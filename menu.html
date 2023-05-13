@@ -74,8 +74,9 @@
                             </div>
 
                             <div id="toEat" class="eat hide">
-                                <h3>Egg Avocado Toast</h3>
-                                <p>Avocado toast with poached eggs. <sup>$7.95</sup></p>
+                                <h3>Avocado Toast</h3>
+                                <p>Avocado toast with vinaigrette drizzle and greens.<sup>$7.95</sup><br>
+                                <small><i>Add bacon +$0.75</i></small></p>
 
                                 <h3>Salmon Avocado Toast</h3>
                                 <p>Avocado toast smoked salmon. <sup>$7.95</sup></p>
@@ -116,6 +117,25 @@
         </div>
     </footer>
     </div>
+
+    <!-- VUE -->
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    menu: [
+                        { id: 10, url: 'index.html', name: 'Home' },
+                        { id: 11, url: 'menu.html', name: 'Menu' },
+                        { id: 12, url: 'about.html', name: "About Us" },
+                        { id: 13, url: 'craft.html', name: "Our Craft" },
+                        { id: 14, url: 'locations.html', name: "Locations" },
+                        { id: 15, url: 'catering.html', name: "Catering" }
+                    ]
+                }
+                //end menu
+            }
+        }).mount('#navApp')
+    </script>
 </body>
 
 </html>

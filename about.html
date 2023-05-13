@@ -8,77 +8,124 @@
     <title>Autumn Spice - About Us</title>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/ca6dee911a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <blockquote>
-                <span>&ldquo;</span>
-                To inspire and nurture the human spirit - one person, one cup and one neighborhood at a time.
-                <span>&rdquo;</span>
-            </blockquote>
-            <h1>About Us</h1>
-            <p>
-                We opened Autumn Spice in 2006, in a small cafe and drive-thru in Crystal Lake IL. We jumped into
-                the coffee industry head first. There were some things we all really cared about. First, we wanted to
-                find,
-                roast,
-                and sell the absolute best coffees we could get our hands on.
-            </p>
-            <p>
-                Autumn Spice has been a caring company from the very beginning. We care about who we are, who we serve
-                and what
-                we
-                do.
-            </p>
+    <!--HEADER-->
+    <div class="container">
+        <header>
+            <ul id="slideShow">
+                <li id="slide"><img src="images/slideshow/img1.jpg" alt="Barista pouring milk"></li>
+                <li id="slide"><img src="images/slideshow/img2.jpg" alt="Espresso machine"></li>
+                <li id="slide"><img src="images/slideshow/img3.jpg" alt="breakfast menu displayed on a table"></li>
+                <li id="slide"><img src="images/slideshow/img4.jpg" alt="1 pound coffe bean bags on a shelf"></li>
+                <li id="slide"><img src="images/slideshow/img5.jpg" alt="close in espresso shot"></li>
+            </ul>
+            <h1 id="titleLogo">Autumn Spice</h1>
+            <nav id="navApp">
+                <ul v-for="item in menu">
+                    <li><a v-bind:key="item.id" :href="item.url">{{ item.name }}</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <h1>Our Mission</h1>
-            <p>
-                Coffee shops occupy an important space in many of our lives because of their unique ability to fulfill
-                so many
-                of
-                our needs: socializing, studying, working, resting, reading — in an atmosphere that suits our tastes and
-                makes
-                us
-                feel like we belong. At their best, coffee shops are places that meet the needs of a community, while
-                giving
-                communities the space they need to get together.
+        <main>
+            <div id="leftPanel">
+                <blockquote>
+                    <span>&ldquo;</span>
+                    To inspire and nurture the human spirit - one person, one cup and one neighborhood at a time.
+                    <span>&rdquo;</span>
+                </blockquote>
+                <h1>About Us</h1>
+                <p>
+                    We opened Autumn Spice in 2006, in a small cafe and drive-thru in Crystal Lake IL. We jumped into
+                    the coffee industry head first. There were some things we all really cared about. First, we wanted
+                    to
+                    find,
+                    roast,
+                    and sell the absolute best coffees we could get our hands on.
+                </p>
+                <p>
+                    Autumn Spice has been a caring company from the very beginning. We care about who we are, who we
+                    serve
+                    and what
+                    we
+                    do.
+                </p>
 
-                Autumn Spice offers a unique coffee house environment unlike any other. We are not only a place to drop
-                in and
-                get
-                your morning cup of coffee (although you are more than welcome to do that), we are a place where you can
-                sit
-                down
-                and enjoy that tailor-made cup of coffee. Let our professional baristas create a wonderful experience
-                just for
-                you.
-            </p>
-            <p>
-                We serve coffee, but we're not your typical coffee shop. We also serve great food in an atmosphere where
-                conversation blooms and individuals or families alike come to enjoy their time. We make a conscious
-                effort to provide for and engage with the local community.
-            </p>
+                <h1>Our Mission</h1>
+                <p>
+                    Coffee shops occupy an important space in many of our lives because of their unique ability to
+                    fulfill
+                    so many
+                    of
+                    our needs: socializing, studying, working, resting, reading — in an atmosphere that suits our tastes
+                    and
+                    makes
+                    us
+                    feel like we belong. At their best, coffee shops are places that meet the needs of a community,
+                    while
+                    giving
+                    communities the space they need to get together.
 
-    </main>
+                    Autumn Spice offers a unique coffee house environment unlike any other. We are not only a place to
+                    drop
+                    in and
+                    get
+                    your morning cup of coffee (although you are more than welcome to do that), we are a place where you
+                    can
+                    sit
+                    down
+                    and enjoy that tailor-made cup of coffee. Let our professional baristas create a wonderful
+                    experience
+                    just for
+                    you.
+                </p>
+                <p>
+                    We serve coffee, but we're not your typical coffee shop. We also serve great food in an atmosphere
+                    where
+                    conversation blooms and individuals or families alike come to enjoy their time. We make a conscious
+                    effort to provide for and engage with the local community.
+                </p>
+            </div>
+        </main>
 
-    <!--FOOTER-->
-    <footer>
-        <div id="footerText">FOOTER - Giselle Njaastad</div>
-        <div id="footerSocial">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-    </footer>
+        <!--FOOTER-->
+        <footer>
+            <div id="footerText">FOOTER - Giselle Njaastad</div>
+            <div id="footerSocial">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </footer>
     </div>
+
+    <!-- VUE -->
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    menu: [
+                        { id: 10, url: 'index.html', name: 'Home' },
+                        { id: 11, url: 'menu.html', name: 'Menu' },
+                        { id: 12, url: 'about.html', name: "About Us" },
+                        { id: 13, url: 'craft.html', name: "Our Craft" },
+                        { id: 14, url: 'locations.html', name: "Locations" },
+                        { id: 15, url: 'catering.html', name: "Catering" }
+                    ]
+                }
+                //end menu
+            }
+        }).mount('#navApp')
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 /*imports*/
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('styles/nav.css');
 
 body {
     background-color: #204d48;
@@ -8,7 +9,7 @@ body {
 
 .container {
     font-family: 'Mulish', sans-serif;
-    font-size: large;
+    font-size: medium;
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -165,21 +166,58 @@ button {
 }
 
 @keyframes fade {
-    from{
+    from {
         opacity: 0.25;
         transform: translateY(40px);
     }
 }
 
+/* ----- TABLE STYLES ----- */
+table {
+    margin: 30px;
+    overflow-x: auto;
+}
+
+table td:nth-child(2) {
+    width: 70%;
+    padding: 30px
+}
+
 /* ------- CATERING FORM -------- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px;
+    width: 60%;
+}
+
+input[type="date"] {
+    width: 25%;
+}
+
+textarea {
+    width: 70%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    resize: none;
+}
 
 #submit {
     background-color: #000;
     color: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 
 /*---- Footer content ----*/
 footer {
+    font-family: 'Mulish', sans-serif;
+    font-size: medium;
+    font-weight: 500;
     background-color: #542c34;
     color: #fff;
     display: flex;
@@ -198,11 +236,58 @@ footer {
 
 
 /* ------ MEDIA QUERY ------ */
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
 
+    header {
+        font-size: small;
+        height: 250px;
+        width: 100%;
+        display: flex;
+    }
+    ul {
+        display: flex;
+    }
 
+    img {
+        width: 80%;
+    }
 
+    #rightPanel, #leftPanel {
+        margin: 0;
+    }
 
+    table {
+        text-align: center;
+        margin: 0;
+    }
 
+    table td:nth-child(2) {
+        padding: 5px;
+        padding-bottom: 20px;
+    }
+
+    th {
+        font-size: large;
+        padding-bottom: 20px;
+    }
+
+    #footerText{
+        flex: 1;
+        margin-top: 10px;
+    }
+    #footerSocial {
+        margin-top: 10px;
+    }
+
+    .fa-brands{
+        margin: 1px !important;
+    }
+}
 
 
 /*---- Font Awesome ----*/
