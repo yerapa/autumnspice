@@ -38,7 +38,7 @@
         </header>
 
         <!--MAIN-->
-        <main>
+        <main height="1000">
             <div id="leftPanel">
                 <h2>Submitted Information</h2>
                 <table>
