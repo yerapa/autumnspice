@@ -12,14 +12,19 @@ $(document).ready(function () {
 
     //burguer menu
     $(document).ready(function () {
-        
+        if ($(window).width() > 768) {
+            $("nav").show();
+            $("nav ul, li").show();
+        }
+
         if ($(window).width() < 768) {
             $(".close").hide();
             $("nav").hide();
+            $("nav ul, nav li").hide();
             $(".hamburger").click(function () {
                 $("nav").slideToggle("slow", function () {
                     $(".hamburger").hide();
-                    $("nav ul").show()
+                    $("nav ul, li").show()
                     $(".close").show();
                 });
             });

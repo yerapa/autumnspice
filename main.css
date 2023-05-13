@@ -296,6 +296,12 @@ footer {
         margin-right: 0;
     }
 
+    nav ul, nav li {
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+    }
+
     img {
         width: 80%;
     }
@@ -335,14 +341,13 @@ footer {
 }
 
 @media (min-width: 768px) {
-
     .hamburger,
     .close {
         display: none;
     }
-
-    nav, nav ul, nav li {
-        display: flex;
+    nav, nav ul, li {
+        display: flex !important;
+        justify-content: center;
     }
 }
 
